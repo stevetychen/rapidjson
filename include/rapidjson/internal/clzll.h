@@ -48,7 +48,7 @@ inline uint32_t clzll(uint64_t x) {
 #endif // _WIN64
 
     return 63 - r;
-#elif (defined(__GNUC__) && __GNUC__ >= 4) || 1
+#elif (defined(__GNUC__) && __GNUC__ >= 4)
     // __builtin_clzll wrapper
     return static_cast<uint32_t>(__builtin_clzll(x));
 #else
